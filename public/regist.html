@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav style="background-color: #355833">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center space-x-3">
+            <img class="block lg:block h-8 w-auto" src="/public/asset/Logo 2.png" alt="logo" />
+            <img class="block lg:block h-8 w-auto" src="/public/asset/Logo 2 (1).png" alt="tulisan" />
+          </div>
+        </div>
+
+        <div class="
+              absolute
+              inset-y-0
+              right-0
+              flex
+              items-center
+              pr-2
+              sm:static sm:inset-auto sm:ml-6 sm:pr-0
+            ">
+          <button type="button" class="
+                bg-transparant
+                p-1
+                rounded-full
+                text-gray-400
+                hover:text-white
+                focus:outline-none
+                focus:ring-2
+                focus:ring-offset-2
+                focus:ring-offset-gray-800
+                focus:ring-white
+              ">
+            <span class="sr-only">View notifications</span>
+            <!-- Heroicon name: outline/bell -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="ml-3 relative">
+            <div>
+              <button type="button" class="
+                    bg-gray-800
+                    flex
+                    text-sm
+                    rounded-full
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-offset-2
+                    focus:ring-offset-gray-800
+                    focus:ring-white
+                  " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!-- Conten -->
+
+  <div class=" flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0 mt-10">
+
+    <div class=" flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-gray-100 sm:mx-0" style="height: 500px">
+      <div class="hidden md:block md:w-1/2 rounded-r-lg"
+        style=" background: url('https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1616034685/wyc1kssrpzvibdl9nhlv.jpg'); background-size: cover; background-position: center center;">
+      </div>
+      <div class="flex flex-col w-full md:w-1/2 p-4">
+        <div class="flex flex-col flex-1 justify-center mb-8">
+          <h1 class="text-4xl text-center font-thin">Selamat Datang</h1>
+          <div class="w-full mt-4">
+
+            <div class="flex flex-col mt-4">
+              <input id="email" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="email"
+                value="" placeholder="Email" />
+            </div>
+
+            <div class="flex flex-col mt-4">
+              <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400"
+                name="password" required placeholder="Password" />
+            </div>
+
+            <div class="flex flex-col mt-4">
+              <input id="nama" type="text" class="flex-grow h-8 px-2 rounded border border-grey-400" name="" required
+                placeholder="Nama lengkap" />
+            </div>
+
+            <div class="flex flex-col mt-4">
+              <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400"
+                name="password" required placeholder="Password" />
+            </div>
+
+            <div class="flex items-center mt-4">
+              <input type="checkbox" name="remember" id="remember" class="mr-2" />
+              <label for="remember" class="text-sm text-grey-dark">Setuju Semua persyaratan</label>
+            </div>
+
+
+            <a class="flex flex-col mt-8" href="/public/home.html">
+              <!-- <a href="/public/home.html"> -->
+              <button type="submit" class="hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded"
+                style="background-color: #355833">
+                Daftar
+              </button>
+            </a>
+
+
+
+
+            <div class="text-center mt-4">
+              <a class="no-underline hover:underline text-blue-dark text-xs" href="/public/login.html">
+                Sudah Punya akun
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Footer-->
+  <footer class="text-gray-600 body-font">
+    <div
+      class=" container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="" class=" flex title-font font-medium items-center md:justify-start justify-center text-gray-900 ">
+          <img src="/public/asset/Logo 2 (1).png" alt="" style="width: 50%;">
+          <!-- <i class="fas fa-cubes fa-lg text-purple-500"></i>
+    					<span class="ml-3 text-xl">Tailwind elements</span> -->
+        </a>
+        <p class="mt-2 text-sm text-gray-500">
+          fresh Farm adalah sebuah website yang mempertemukan petani dengan pembeli secara online,
+          hal ini memudahkan petani dalam menjual hasil productnya
+        </p>
+      </div>
+      <div class=" flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center ">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Hubungi Kami</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Gedung A, Lt 6 Jl. Maharaja No. 13 RT
+                03/RW 10
+                Lowokwaru, Kota Malang 65116</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Senin-Minggu 09.00-17.00</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Email : help@e-sam.com </a>
+            </li>
+          </nav>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Bantuan dan Panduan
+          </h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Syarat dan Ketentuann</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Kebijakan Privasi</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Bantuan</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Ikuti Kami</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Facebook</a>
+            </li>
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Instagram</a>
+            </li>
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Twiter/a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-1">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Download App</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800"></a>
+            </li>
+            <img src="https://tanihub.com/static/img/mobile-screenshot-2.png" alt="" class="w-14">
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

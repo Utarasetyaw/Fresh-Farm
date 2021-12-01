@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav style="background-color: #355833;">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center space-x-3">
+            <img class="block lg:block h-8 w-auto " src="/public/asset/Logo 2.png" alt="Workflow">
+            <img class="block lg:block h-8 w-auto" src="/public/asset/Logo 2 (1).png" alt="Workflow">
+          </div>
+          <div class="hidden sm:block sm:ml-1">
+            <div class="flex">
+              <a href="/public/login.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+                aria-current="page">Reseller</a>
+              <a href="/public/payment.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+                aria-current="page">Payment</a>
+              <a href="/public/cekout.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+                aria-current="page">Trolley</a>
+              <a href="" class=" text-white px-2 py-2 text-lg font-sans-Roboto" aria-current="page">Last
+                Seen</a>
+            </div>
+          </div>
+          <form class="mb-1 mt-1 ml-3 w-10 md:mb-0 md:w-2/4">
+            <label class="hidden" for="search-form">Search</label>
+            <input class="bg-grey-lightest border-2 focus:border-orange p-1 rounded-lg shadow-inner w-full px-2"
+              placeholder="Search" type="text">
+            <button class="hidden">Submit</button>
+          </form>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="bg-transparant p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            <span class="sr-only">View notifications</span>
+            <!-- Heroicon name: outline/bell -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="ml-3 relative">
+            <div>
+              <a href="/public/login.html">
+                <button type="button"
+                  class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <img class="h-8 w-8 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt="">
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="login.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+          aria-current="page">Reseller</a>
+
+        <a href="payment.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Payment</a>
+
+        <a href="cekout.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Trolley</a>
+
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Last
+          seen</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-6 mt-5">
+    <div class="md:flex md:items-center">
+      <div class="w-full h-64 md:w-1/2 lg:h-96">
+        <img class="h-full w-full rounded-md object-cover max-w-lg mx-auto"
+          src="https://s1.bukalapak.com/img/61497364412/large/data.jpeg" alt="Sayur bayam" />
+      </div>
+
+      <div class="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
+        <h3 class="text-gray-700 uppercase text-lg">Sayur bayam</h3>
+        <span class="text-gray-500 mt-3">14 sold out</span>
+        <hr class="my-3" />
+        <label class="text-gray-700 text-sm">Product Fresh by BKP Nasional</label>
+        <hr class="my-3" />
+        <label class="text-gray-700 text-sm">Product Fresh by FreshFarm</label>
+        <hr class="my-3" />
+        <label class="text-gray-700 text-sm">Product Good by Litbang Pertanian</label>
+        <div class="mt-2">
+          <label class="text-gray-700 text-sm" for="count">Jumlah:</label>
+          <div class="flex items-center mt-1">
+            <button class="text-gray-500 focus:outline-none focus:text-gray-600">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <span class="text-gray-700 text-lg mx-2">56</span>
+            <button class="text-gray-500 focus:outline-none focus:text-gray-600">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mt-3">
+        </div>
+        <div class="flex items-center mt-6">
+          <a href="/public/payment.html">
+            <button class="
+                px-8
+                py-2
+                bg-green-600
+                text-white text-sm
+                font-medium
+                rounded
+              ">
+              Beli
+            </button></a>
+
+          <a href="/public/cekout.html"><button class="
+                mx-2
+                text-gray-600
+                border
+                rounded-md
+                p-2
+                hover:bg-gray-200
+                focus:outline-none
+              ">
+              <svg href="cekout.html" class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16">
+      <h3 class="text-gray-600 text-2xl font-medium">Sayur serupa</h3>
+      <div class="
+            grid
+            gap-6
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-4
+            mt-6
+          ">
+        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div class="flex items-end justify-end h-56 w-full bg-cover" style="
+                background-image: url('https://fajar.co.id/wp-content/uploads/2021/09/images-11.jpeg');
+              ">
+            <button class="
+                  p-2
+                  rounded-full
+                  bg-green-600
+                  text-white
+                  mx-5
+                  -mb-4
+                ">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Bayam Solo</h3>
+            <span class="text-gray-500 mt-2">RP : 13.000</span>
+          </div>
+        </div>
+        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div class="flex items-end justify-end h-56 w-full bg-cover" style="
+                background-image: url('https://2.bp.blogspot.com/-3ls8bOJnITU/WH7s8RclcVI/AAAAAAAAAFs/fj0a1uiABr4bZla4LCVh-EtNvdlaxRTigCLcB/s1600/Akar%2Bbayam%2B1.jpg');
+              ">
+            <button class="
+                  p-2
+                  rounded-full
+                  bg-green-600
+                  text-white
+                  mx-5
+                  -mb-4
+                ">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Bayam Jepara</h3>
+            <span class="text-gray-500 mt-2">RP : 25.000</span>
+          </div>
+        </div>
+        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div class="flex items-end justify-end h-56 w-full bg-cover" style="
+                background-image: url('https://cf.shopee.co.id/file/a237877d9ec245318634ad4182526369');
+              ">
+            <button class="
+                  p-2
+                  rounded-full
+                  bg-green-600
+                  text-white
+                  mx-5
+                  -mb-4
+                ">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Bayam Malang</h3>
+            <span class="text-gray-500 mt-2">RP : 12.000</span>
+          </div>
+        </div>
+        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div class="flex items-end justify-end h-56 w-full bg-cover" style="
+                background-image: url('https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-4630790/kedaisayur_kedaisayur_-_bayam_hijau_-350_gram-_full02_doejxedo.jpg');
+              ">
+            <button class="
+                  p-2
+                  rounded-full
+                  bg-green-600
+                  text-white
+                  mx-5
+                  -mb-4
+                ">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Bayam Surabaya</h3>
+            <span class="text-gray-500 mt-2">RP : 20.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-gray-600 body-font">
+    <div
+      class=" container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="" class=" flex title-font font-medium items-center md:justify-start justify-center text-gray-900 ">
+          <img src="/public/asset/Logo 2 (1).png" alt="" style="width: 50%;">
+          <!-- <i class="fas fa-cubes fa-lg text-purple-500"></i>
+    					<span class="ml-3 text-xl">Tailwind elements</span> -->
+        </a>
+        <p class="mt-2 text-sm text-gray-500">
+          fresh Farm adalah sebuah website yang mempertemukan petani dengan pembeli secara online,
+          hal ini memudahkan petani dalam menjual hasil productnya
+        </p>
+      </div>
+      <div class=" flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center ">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Hubungi Kami</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Gedung A, Lt 6 Jl. Maharaja No. 13 RT
+                03/RW 10
+                Lowokwaru, Kota Malang 65116</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Senin-Minggu 09.00-17.00</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Email : help@e-sam.com </a>
+            </li>
+          </nav>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Bantuan dan Panduan
+          </h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Syarat dan Ketentuann</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Kebijakan Privasi</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Bantuan</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Ikuti Kami</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Facebook</a>
+            </li>
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Instagram</a>
+            </li>
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800">Twiter/a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-1">
+          <h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Download App</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="" class="text-gray-600 hover:text-gray-800"></a>
+            </li>
+            <img src="https://tanihub.com/static/img/mobile-screenshot-2.png" alt="" class="w-14">
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

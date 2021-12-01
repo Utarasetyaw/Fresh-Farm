@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+</head>
+
+<body>
+	<nav style="background-color: #355833;">
+		<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+			<div class="relative flex items-center justify-between h-16">
+				<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+					<div class="flex-shrink-0 flex items-center space-x-3">
+						<img class="block lg:block h-8 w-auto " src="/public/asset/Logo 2.png" alt="Workflow">
+						<img class="block lg:block h-8 w-auto" src="/public/asset/Logo 2 (1).png" alt="Workflow">
+					</div>
+					<div class="hidden sm:block sm:ml-1">
+						<div class="flex">
+							<a href="/public/login.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+								aria-current="page">Reseller</a>
+							<a href="/public/payment.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+								aria-current="page">Payment</a>
+							<a href="/public/cekout.html" class=" text-white px-2 py-2 text-lg font-sans-Roboto"
+								aria-current="page">Trolley</a>
+							<a href="" class=" text-white px-2 py-2 text-lg font-sans-Roboto" aria-current="page">Last
+								Seen</a>
+						</div>
+					</div>
+					<form class="mb-1 mt-1 ml-3 w-10 md:mb-0 md:w-2/4">
+						<label class="hidden" for="search-form">Search</label>
+						<input
+							class="bg-grey-lightest border-2 focus:border-orange p-1 rounded-lg shadow-inner w-full px-2"
+							placeholder="Search" type="text">
+						<button class="hidden">Submit</button>
+					</form>
+				</div>
+				<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+					<button type="button"
+						class="bg-transparant p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+						<span class="sr-only">View notifications</span>
+						<!-- Heroicon name: outline/bell -->
+						<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+							stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+						</svg>
+					</button>
+
+					<!-- Profile dropdown -->
+					<div class="ml-3 relative">
+						<div>
+							<a href="/public/login.html">
+								<button type="button"
+									class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+									id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+									<img class="h-8 w-8 rounded-full"
+										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+										alt="">
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile menu, show/hide based on menu state. -->
+		<div class="sm:hidden" id="mobile-menu">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+				<a href="login.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+					aria-current="page">Reseller</a>
+
+				<a href="payment.html"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Payment</a>
+
+				<a href="cekout.html"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Trolley</a>
+
+				<a href="#"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Last
+					seen</a>
+			</div>
+		</div>
+	</nav>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+	<style>
+		.carousel-open:checked+.carousel-item {
+			position: static;
+			opacity: 100;
+		}
+
+		.carousel-item {
+			-webkit-transition: opacity 0.6s ease-out;
+			transition: opacity 0.6s ease-out;
+		}
+
+		#carousel-1:checked~.control-1,
+		#carousel-2:checked~.control-2,
+		#carousel-3:checked~.control-3 {
+			display: block;
+		}
+
+		.carousel-indicators {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: 2%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			z-index: 10;
+		}
+
+		#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+		#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+		#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+			color: #2b6cb0;
+		}
+	</style>
+	<div class="flex mb-4 mt-5">
+		<div class="w-1/3"></div>
+		<div class="rounded relative overflow-hidden shadow-xl w-full" style="height: 300px;">
+			<div class="carousel-inner relative overflow-hidden w-full bg-center">
+				<!--Slide 1-->
+				<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+					checked="checked" />
+				<div class="carousel-item absolute opacity-0 bg-center"
+					style=" height: 400px; background-image: url(/public/asset/Frame\ 3.png); ">
+				</div>
+				<label for="carousel-3"
+					class=" control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto flex justify-center content-center "><i
+						class="fas fa-angle-left mt-3"></i></label>
+				<label for="carousel-2"
+					class=" next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto "><i
+						class="fas fa-angle-right mt-3"></i></label>
+				<!--Slide 2-->
+				<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+					hidden="" />
+				<div class="carousel-item absolute opacity-0 bg-center"
+					style=" height: 500px; background-image: url(/public/asset/Frame\ 3.png); ">
+				</div>
+				<label for="carousel-1"
+					class=" control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto "><i
+						class="fas fa-angle-left mt-3"></i></label>
+				<label for="carousel-3"
+					class=" next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto "><i
+						class="fas fa-angle-right mt-3"></i></label>
+				<!-- Add additional indicators for each slide-->
+				<ol class="carousel-indicators">
+					<li class="inline-block mr-3">
+						<label for="carousel-1"
+							class=" carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700 ">•</label>
+					</li>
+					<li class="inline-block mr-3">
+						<label for="carousel-2"
+							class=" carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700 ">•</label>
+					</li>
+				</ol>
+			</div>
+		</div>
+		<div class="w-1/3"></div>
+	</div>
+
+	<!-- conten -->
+	<section class="overflow-hidden text-gray-700">
+		<div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+			<div class="flex flex-wrap space-x-6 mb-6">
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://s1.bukalapak.com/img/61497364412/large/data.jpeg" class="" alt="" />
+					<div class="p-4">
+						<a class="text-xl font-semibold mb-2" href="/public/productdetail.html">Sayur Bayam</a>
+						<p class="mb-4">
+							Tumbuhan ini berasal dari Amerika tropik namun sekarang tersebar ke seluruh dunia. Tumbuhan
+							ini dikenal sebagai sayuran
+							sumber zat besi yang penting bagi tubuh
+						</p>
+						<a href="/public/payment.html">
+							<button
+								class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+								type="button">RP : 20.000</button></a>
+					</div>
+				</div>
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://cf.shopee.co.id/file/0ee78dda101dad79286dbdc7daae8da3" class="" alt="" />
+					<div class="p-4">
+						<h5 class="text-xl font-semibold mb-2">Sayur Sawi</h5>
+						<p class="mb-4">
+							Sawi hijau adalah salah satu sayuran daun populer di Indonesia. Nama lainnya adalah sawi
+							bakso atau caisim/caisin.Jenis sawi lain yang juga kadang-kadang disebut sawi hijau
+						</p>
+						<button
+							class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+							type="button">RP : 18.000</button>
+					</div>
+				</div>
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//92/MTA-10352494/no_brand_belanja_sayur_-_sawi_putih_-500gr-_full01_ineo193x.jpg"
+						class="" alt="" />
+					<div class="p-4">
+						<h5 class="text-xl font-semibold mb-2">Sayur Sawi Putih</h5>
+						<p class="mb-4">
+							Sawi putih dikenal sebagai sayuran olahan dalam masakan Tionghoa; karena itu disebut juga
+							sawi cina. Sebutan lainnya adalah petsai Sawi putih dapat dilihat penggunaannya pada asinan,
+							dalam capcai
+						</p>
+						<button
+							class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+							type="button">RP : 22.000</button>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section class="overflow-hidden text-gray-700 ">
+		<div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+			<div class="flex flex-wrap space-x-6 mb-6">
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://images.tokopedia.net/img/cache/700/product-1/2018/12/19/4432119/4432119_cb4ac791-af09-4d21-842f-fcf37905a902_480_480.jpg"
+						class="" alt="" />
+					<div class="p-4">
+						<h5 class="text-xl font-semibold mb-2">Selada</h5>
+						<p class="mb-4">
+							jenis makanan yang terdiri dari campuran sayur-sayuran dan bahan-bahan makanan siap santap.
+							Selada didefinisikan
+							oleh The Dictionary of American Food and Drink
+						</p>
+						<button
+							class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+							type="button">RP : 15.700</button>
+					</div>
+				</div>
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://cf.shopee.co.id/file/7dee92e3d8993c33ff3b1113b867c7dc" class="" alt="" />
+					<div class="p-4">
+						<h5 class="text-xl font-semibold mb-2">Brocoli</h5>
+						<p class="mb-4">
+							Brokoli adalah tanaman yang sering dibudidayakan sebagai sayur.
+							Brokoli adalah kultivar dari spesies yang sama dengan kubis dan kembang kol, yaitu Brassica
+							oleracea
+						</p>
+						<button
+							class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+							type="button">RP : 12.000</button>
+					</div>
+				</div>
+
+				<div class="shadow-md rounded-md overflow-hidden" style="width: 400px">
+					<img src="https://mdm.tanihub.com/images/10004/product/kangkung_akar.jpg" class="" alt="" />
+					<div class="p-4">
+						<h5 class="text-xl font-semibold mb-2">Kangkung</h5>
+						<p class="mb-4">
+							Kangkung adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan.
+							Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia
+						</p>
+						<button
+							class=" bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
+							type="button">RP : 18.500</button>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Required font awesome -->
+	<footer class="text-gray-600 body-font">
+		<div
+			class=" container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+			<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+				<a href=""
+					class=" flex title-font font-medium items-center md:justify-start justify-center text-gray-900 ">
+					<img src="/public/asset/Logo 2 (1).png" alt="" style="width: 50%;">
+					<!-- <i class="fas fa-cubes fa-lg text-purple-500"></i>
+					<span class="ml-3 text-xl">Tailwind elements</span> -->
+				</a>
+				<p class="mt-2 text-sm text-gray-500">
+					fresh Farm adalah sebuah website yang mempertemukan petani dengan pembeli secara online,
+					hal ini memudahkan petani dalam menjual hasil productnya
+				</p>
+			</div>
+			<div class=" flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center ">
+				<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+					<h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Hubungi Kami</h2>
+					<nav class="list-none mb-10">
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Gedung A, Lt 6 Jl. Maharaja No. 13 RT
+								03/RW 10
+								Lowokwaru, Kota Malang 65116</a>
+						</li>
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Senin-Minggu 09.00-17.00</a>
+						</li>
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Email : help@e-sam.com </a>
+						</li>
+					</nav>
+				</div>
+
+				<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+					<h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Bantuan dan Panduan
+					</h2>
+					<nav class="list-none mb-10">
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Syarat dan Ketentuann</a>
+						</li>
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Kebijakan Privasi</a>
+						</li>
+						<li>
+							<a class="text-gray-600 hover:text-gray-800">Bantuan</a>
+						</li>
+					</nav>
+				</div>
+				<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+					<h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Ikuti Kami</h2>
+					<nav class="list-none mb-10">
+						<li>
+							<a href="" class="text-gray-600 hover:text-gray-800">Facebook</a>
+						</li>
+						<li>
+							<a href="" class="text-gray-600 hover:text-gray-800">Instagram</a>
+						</li>
+						<li>
+							<a href="" class="text-gray-600 hover:text-gray-800">Twiter/a>
+						</li>
+					</nav>
+				</div>
+				<div class="lg:w-1/4 md:w-1/2 w-full px-1">
+					<h2 class=" title-font font-medium text-gray-900 tracking-widest text-sm mb-3 ">Download App</h2>
+					<nav class="list-none mb-10">
+						<li>
+							<a href="" class="text-gray-600 hover:text-gray-800"></a>
+						</li>
+						<img src="https://tanihub.com/static/img/mobile-screenshot-2.png" alt="" class="w-14">
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
